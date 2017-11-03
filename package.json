@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "browser-sync start --server --files='./*html, ./main.css'",
+    "build:css": "postcss --use postcss-nested autoprefixer --autoprefixer.browsers 'last 2 versions' -c -o css/style.css main.css -w"
   },
   "author": "yunnie yunick",
   "license": "ISC"
